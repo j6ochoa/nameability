@@ -1,5 +1,3 @@
-# Auto detect text files and perform LF normalization
-* text=auto
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,45 +94,45 @@ timeline.push(preload);
  // Welcome (prototypes based on condition)
 
 
- var welcome = {
-   type: jsPsychHtmlKeyboardResponse,
-   choices: ['p'],
-   stimulus: function () {
-     if (condition_assignment === "easy") {
-       return `
-         <p><strong>Study these prototypes:</strong></p>
-         <div style="display:flex; justify-content:center; gap:80px; align-items:center; margin-top:20px;">
-           <div style="text-align:center;">
-             <img src="images_1a/high_A_000.png" style="width:220px;" />
-             <p><strong>Category A</strong></p>
-           </div>
-           <div style="text-align:center;">
-             <img src="images_1a/high_B_111.png" style="width:220px;" />
-             <p><strong>Category B</strong></p>
-           </div>
-         </div>
-       `;
-     } else {
-       return `
-         <p><strong>Study these prototypes:</strong></p>
-         <div style="display:flex; justify-content:center; gap:80px; align-items:center; margin-top:20px;">
-           <div style="text-align:center;">
-             <img src="images_1a/low_A_000.png" style="width:220px;" />
-             <p><strong>Category A</strong></p>
-           </div>
-           <div style="text-align:center;">
-             <img src="images_1a/low_B_111.png" style="width:220px;" />
-             <p><strong>Category B</strong></p>
-           </div>
-         </div>
-       `;
-   }},
-   prompt: `
-     <p>You will see similar wheels and must categorize them as quickly and accurately as possible.</p>
-     <p>Press <strong>P</strong> to start.</p>
-   `
- };
- timeline.push(welcome);
+//  var welcome = {
+//    type: jsPsychHtmlKeyboardResponse,
+//    choices: ['p'],
+//    stimulus: function () {
+//      if (condition_assignment === "easy") {
+//        return `
+//          <p><strong>Study these prototypes:</strong></p>
+//          <div style="display:flex; justify-content:center; gap:80px; align-items:center; margin-top:20px;">
+//            <div style="text-align:center;">
+//              <img src="images_1a/high_A_000.png" style="width:220px;" />
+//              <p><strong>Category A</strong></p>
+//            </div>
+//            <div style="text-align:center;">
+//              <img src="images_1a/high_B_111.png" style="width:220px;" />
+//              <p><strong>Category B</strong></p>
+//            </div>
+//          </div>
+//        `;
+//      } else {
+//        return `
+//          <p><strong>Study these prototypes:</strong></p>
+//          <div style="display:flex; justify-content:center; gap:80px; align-items:center; margin-top:20px;">
+//            <div style="text-align:center;">
+//              <img src="images_1a/low_A_000.png" style="width:220px;" />
+//              <p><strong>Category A</strong></p>
+//            </div>
+//            <div style="text-align:center;">
+//              <img src="images_1a/low_B_111.png" style="width:220px;" />
+//              <p><strong>Category B</strong></p>
+//            </div>
+//          </div>
+//        `;
+//    }},
+//    prompt: `
+//      <p>You will see similar wheels and must categorize them as quickly and accurately as possible.</p>
+//      <p>Press <strong>P</strong> to start.</p>
+//    `
+//  };
+//  timeline.push(welcome);
 
 
 
@@ -152,9 +150,7 @@ timeline.push(preload);
    `
  };
  timeline.push(instructions);
-
-
-
+ 
 
  // Fixation
  var fixation = {
