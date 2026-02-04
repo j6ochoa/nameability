@@ -15,9 +15,7 @@
  <link href="https://unpkg.com/jspsych@8.2.3/css/jspsych.css" rel="stylesheet" />
 </head>
 
-
 <body></body>
-
 
 <script>
  // Init
@@ -27,9 +25,7 @@
    }
  });
 
-
  var timeline = [];
-
 
  // Preload images
  var preload = {
@@ -198,6 +194,13 @@ timeline.push(preload);
    timeline.push(test_procedure_low, test_block_1, test_procedure_low, test_block_2, test_procedure_low, test_block_3);
  }
 
+ var survey = {
+  type: jsPsychSurveyText, 
+  questions: [
+    { prompt: 'Did you use any particular strategy for sorting the color wheels into categories?', name: 'Strategy'}
+  ]
+ };
+ timeline.push(survey);
 
  // Fullscreen OFF + End
  timeline.push({
